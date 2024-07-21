@@ -8,13 +8,12 @@ config();
 
 const app = express();
 
-//middleware
 app.use(express.json())
 app.use(cors())
 app.use(express.urlencoded({extended:false}))
 
-// let apiKey:any = process.env.API_KEY;
-const genAI = new GoogleGenerativeAI("AIzaSyAiKqSjZ_c0IPo1EZm-Fx69uOGctnIP-EI");
+let apiKey:any = process.env.API_KEY;
+const genAI = new GoogleGenerativeAI(apiKey);
 
 app.post("/prompt", async (req, res) => {
   try {
