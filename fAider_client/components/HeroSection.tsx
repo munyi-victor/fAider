@@ -23,8 +23,7 @@ const HeroSection = () => {
       <View>
         <Text style={styles.description}>
           For any medical assistance, just explain your query here. Our AI
-          system is dedicated to provide with the best First Aid activities you
-          could undertake to prevent things like excessive bleeding, etc.
+          system is dedicated to provide with the best medical assistance to help you lead a healthy lifestyles and prevent infections.
         </Text>
       </View>
       <View style={styles.buttonContainer}>

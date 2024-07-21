@@ -1,5 +1,5 @@
 import { Stack } from "expo-router/stack";
-import { Button } from "react-native";
+import { Pressable, Text } from "react-native";
 import { useNavigation } from "expo-router";
 
 type NavProps = {
@@ -26,13 +26,12 @@ export default function RootLayout() {
         options={{
           headerTitle: "Home",
           headerRight: () => (
-            <Button
-              title="Menu"
+            <Pressable
               onPress={() => {
                 navigation.navigate('menu')
               }}
-            />
-          ),
+            ><Text style={{color:'#fff', fontSize:18}}>Menu</Text></Pressable>
+          )
         }}
       />
       <Stack.Screen name="menu" options={{ headerTitle: "Menu" }} />
